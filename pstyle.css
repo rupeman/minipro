@@ -1,0 +1,23 @@
+nav{
+    position: relative;
+    margin: auto;
+}
+
+h2{
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    margin: 30%;
+    list-style-type: none;
+}
+
+ul li{
+    padding: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: greenyellow  ;
+}
