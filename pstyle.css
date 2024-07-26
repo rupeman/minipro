@@ -29,7 +29,7 @@ body{
 .container_5{
   padding: 35px;
 }
-.container_1, .container_2, .container_3, .container_4, .container_5 {
+.container_1 ,.container_2, .container_3, .container_4, .container_5, .container_6, .container_7 {
   text-align: center;
 }
 
@@ -52,6 +52,36 @@ body{
   color: white;
   background-color: rgb(0, 14, 100);
   padding: 88px;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#l1, #l3 {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+#l2, #l4 {
+  animation: slideInRight 1s ease-in-out;
 }
 
 
