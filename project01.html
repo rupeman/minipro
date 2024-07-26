@@ -11,32 +11,40 @@
 
 </head>
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class="navbar-brand" href="#"><img src="img/bcage.png" width="150" height="120"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/pngtree-vector-bird-logo-design-png-image_7514429.png" height="50px" width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" aria-current="page" href="#"><h5>HOME</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Learn</a>
+            <a class="nav-link" href="#"><h5>ABOUTS</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Case Study</a>
+            <a class="nav-link active" href="learn.html"><h5>LEARN</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
+            <a class="nav-link" href="news.html"> <h5>NEWS</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Join Us</a>
+            <a class="nav-link" href="Join Us.html"> <h5>JOIN US</h5></a>
           </li>
         </ul>
+        <span class="navbar-text">
+         <h2>Children In Chains</h2>
+        </span>
       </div>
-    </nav>
+    </div>
+  </nav>
+  <div class="container_0">
+      <div class="row">
+        <video autoplay muted loop><source src="vids/vid1.mp4" type="video/mp4"></video>
+      </div>
   </div>
   <div class="container_1">
     <div class="row">
@@ -47,23 +55,25 @@
         <button class="cspath"><a href="#">About Us</a></button>
       </div>
       <div class="col-md-6">
-        <img src="img/c1.jpg" alt="childlabouract" class="img-fluid">
+        <video autoplay muted loop controls ><source src="vids/vid2.webm"></video>
       </div>
     </div>
   </div>
   <div class="container_2">
     <div class="row">
       <div class="col">
-        <h3 id="headdef">What is a Child labour?</h3>
-        <p id="l1">Child labour refers to work that children are too young to perform or that –
-          by its nature or circumstances – can be hazardous. Unlike activities that help children develop
-          (such as contributing to light housework or taking on a job during school holidays), 
-          child labour causes harm to a child’s health, safety or moral development.
-          
-          In its most insidious forms, child labour can amount to slavery or practices similar to slavery, 
-          including the sale and trafficking of children. In some places, children may be forcibly recruited
-          into armed conflict, used in the production and trafficking of drugs, or offered into prostitution.
+        <h3 id="headdef">Our Mission</h3>
+        <div id="l1">
+        <p>At "Children in Chains," our mission is to end child labour worldwide. We strive to create a world where every child has the opportunity to enjoy their childhood, receive a quality education, and grow up in a safe and nurturing environment. Our efforts focus on:
+          <ul>
+          <li>Raising Awareness: Educating the public about the harsh realities of child labour and its impact on children and society.</li>
+          <li>Advocacy: Working with governments and organizations to implement and enforce laws that protect children from exploitation and abuse.</li>
+          <li>Support and Rehabilitation: Providing support and resources to children rescued from child labour, including education, healthcare, and psychological services.</li>
+          <li>Community Empowerment: Engaging with communities to address the root causes of child labour, such as poverty and lack of education, and empowering families to create sustainable livelihoods.</li>
+          </ul>
+          Through our dedicated efforts, we aim to break the chains of child labour and ensure a brighter, safer future for children everywhere.
           </p>
+        </div>
       </div>
     </div>
   </div>
@@ -123,14 +133,14 @@
   </div>
   <div class="container_6">
     <div class="row">
-        <h3>You can read the case studies about child labor act.</h3>
-        <button class="cspath"><a href="#">Case Studies</a></button>
+        <h3>You can find daily news based on Child Labour Act, By Clicking on this button.</h3>
+        <button class="cspath"><a href="news.html">News</a></button>
     </div>
   </div>
   <div class="container_7">
     <div class="row">
       <h3 class="display-5">Join Us to Support the Victims of Child Labour and end this terror</h3><br>
-      <button class="cspath"><a href="#">Join Us</a></button>
+      <button class="cspath"><a href="Join Us.html">Join Us</a></button>
     </div>
   </div>
   <div class="footer">
@@ -179,5 +189,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
