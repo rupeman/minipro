@@ -8,7 +8,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+  <script src="script.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,13 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#"><h5>HOME</h5></a>
+            <a class="nav-link active" aria-current="page" href="#"><h5>HOME</h5></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><h5>ABOUTS</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="learn.html"><h5>LEARN</h5></a>
+            <a class="nav-link" href="learn.html"><h5>LEARN</h5></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="news.html"> <h5>NEWS</h5></a>
@@ -42,10 +42,36 @@
     </div>
   </nav>
   <div class="container_0">
-      <div class="row">
-        <video autoplay muted loop><source src="vids/vid1.mp4" type="video/mp4"></video>
+    <div class="row">
+      <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"  data-bs-interval="3000">
+            <video autoplay muted loop>
+              <source src="vids/vid1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item"  data-bs-interval="2000">
+            <video autoplay muted loop>
+              <source src="vids/bricksnbooks.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="carousel-item"  data-bs-interval="3000">
+            <video autoplay muted loop>
+              <source src="vids/child_study.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-  </div>
+    </div>
+</div>
   <div class="container_1">
     <div class="row">
       <div class="col-md-6">
@@ -55,7 +81,7 @@
         <button class="cspath"><a href="#">About Us</a></button>
       </div>
       <div class="col-md-6">
-        <video autoplay muted loop controls ><source src="vids/vid2.webm"></video>
+        <video autoplay muted loop><source src="vids/vid2.webm"></video>
       </div>
     </div>
   </div>
@@ -71,6 +97,7 @@
           <li>Support and Rehabilitation: Providing support and resources to children rescued from child labour, including education, healthcare, and psychological services.</li>
           <li>Community Empowerment: Engaging with communities to address the root causes of child labour, such as poverty and lack of education, and empowering families to create sustainable livelihoods.</li>
           </ul>
+          <br><br><Br>
           Through our dedicated efforts, we aim to break the chains of child labour and ensure a brighter, safer future for children everywhere.
           </p>
         </div>
@@ -82,8 +109,8 @@
       <div class="col-md-2">
         <img src="img/India_child_labor_ap_img.jpg" class="img-co2" class="image-fluid">
       </div>
-      <div class="col-md-3"></div>
-      <div class="col-md-7" class="art1">
+      <div class="col-md-4"></div>
+      <div class="col-md-6" class="art1">
         <h3>How common is child labour?</h3>
         <p id="l2">
           Child labour remains a persistent problem in the world today. 
@@ -117,20 +144,47 @@
   </div>
   <div class="container_5">
     <div class="row">
-      <div class="col-md-6">
-        <h5 class="display-2">How can we Solve the problem of Child Labour?</h5>
-        <div id="l4">
-          <p>Child labour is a complicated issue that must be addressed in a thorough and diversified manner. Here are some main solutions that may be done to address the issue of child labour:</p>
-          <ol>
-            <li>Education</li>
-            <li>Economic Support and Empowerment</li>
-            <li>Legislation and Enforcment</li>
-            <li>Partnership and Collaboration</li>
-          </ol>
-        </div>
+      <h2>STATES WITH HIGH INCIDENTS OF CHILD LABOUR(BASED ON INTERNATIONAL LABOUR ORGANIZATION DATA)</h2><br>
+      <div class="chart-container">
+        <canvas id="clchart"></canvas>
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('clchart').getContext('2d');
+        const clchart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Uttar Pradesh', 'Bihar', 'Rajasthan', 'Maharashtra', 'Madhya Pradesh'],
+                datasets: [{
+                    label: 'Child Labor Percentage',
+                    data: [21.5, 10.7, 8.4, 7.2, 6.9],
+                    backgroundColor: ['red', 'blue', 'yellow', 'green', 'orange'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (context.parsed !== null) {
+                                    label += `: ${context.parsed}%`;
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+  </script>
   <div class="container_6">
     <div class="row">
         <h3>You can find daily news based on Child Labour Act, By Clicking on this button.</h3>
@@ -189,6 +243,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>

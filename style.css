@@ -83,19 +83,14 @@ grid-gap: 50px 30px;}
     height:100% ;
     object-fit: cover;}
 
-.navbar-nav .nav-item .nav-link {
-   transition: all 0.3s ease;
-}
+    .navbar-nav .nav-item .nav-link {
+      transition: all 0.3s ease;
+    }
     
-.navbar-nav .nav-item .nav-link:hover {
+    .navbar-nav .nav-item .nav-link:hover {
       border: 2px solid;
       border-image: linear-gradient(45deg, red, yellow, green, blue, purple) 1;
       font-weight: bold;
       text-decoration: underline;
-      color: blueviolet;
-}
-
-a{
-   color: black;
-}
-    
+      color: black;
+    }
