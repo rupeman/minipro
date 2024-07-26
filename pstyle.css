@@ -8,11 +8,13 @@ body{
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  border: 1px solid black;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, red, yellow, green, blue, purple) 1;
   font-weight: bold;
   text-decoration: underline;
   color: blueviolet;
 }
+
 
 .img-co2{
     height: 500px;
