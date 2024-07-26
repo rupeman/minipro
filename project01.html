@@ -55,7 +55,7 @@
     <div class="row">
       <div class="col">
         <h3 id="headdef">What is a Child labour?</h3>
-        <p>Child labour refers to work that children are too young to perform or that –
+        <p id="l1">Child labour refers to work that children are too young to perform or that –
           by its nature or circumstances – can be hazardous. Unlike activities that help children develop
           (such as contributing to light housework or taking on a job during school holidays), 
           child labour causes harm to a child’s health, safety or moral development.
@@ -70,12 +70,12 @@
   <div class="container_3">
     <div class="row">
       <div class="col-md-2">
-        <img src="img/India_child_labor_ap_img.jpg" class="img-co2">
+        <img src="img/India_child_labor_ap_img.jpg" class="img-co2" class="image-fluid">
       </div>
       <div class="col-md-3"></div>
       <div class="col-md-7" class="art1">
         <h3>How common is child labour?</h3>
-        <p>
+        <p id="l2">
           Child labour remains a persistent problem in the world today. 
           The latest global estimates indicate that some 160 million children were engaged
           in child labour at the beginning of 2020 – accounting for nearly 1 in 10 children globally.
@@ -90,7 +90,7 @@
     <div class="row">
       <div class="col-md-6">
         <h3>What are the greatest risks associated with child labour?</h3>
-        <p>No matter where or how it occurs, child labour restricts children from their most fundamental rights. 
+        <p id="l3">No matter where or how it occurs, child labour restricts children from their most fundamental rights. 
           Many children driven into labour are cut off from schooling and health care – often at the time they need it most.
           In mining, they may be forced to work in deep underground shafts, to haul heavy loads of rock and to use toxic 
           chemicals to separate minerals or precious metals from ore.
@@ -101,7 +101,7 @@
           What’s more, the isolated nature of some forms of child labour puts them at significant risk of abuse and trafficking.</p>
       </div>
       <div class="col-md-6">
-        <img src="img/brickpickinggirl.jpg"/>
+        <img src="img/brickpickinggirl.jpg" class="img-fluid"/>
       </div>
     </div>
   </div>
@@ -109,13 +109,15 @@
     <div class="row">
       <div class="col-md-6">
         <h5 class="display-2">How can we Solve the problem of Child Labour?</h5>
-        <p>Child labour is a complicated issue that must be addressed in a thorough and diversified manner. Here are some main solutions that may be done to address the issue of child labour:</p>
-        <ol>
-          <li>Education</li>
-          <li>Economic Support and Empowerment</li>
-          <li>Legislation and Enforcment</li>
-          <li>Partnership and Collaboration</li>
-        </ol>
+        <div id="l4">
+          <p>Child labour is a complicated issue that must be addressed in a thorough and diversified manner. Here are some main solutions that may be done to address the issue of child labour:</p>
+          <ol>
+            <li>Education</li>
+            <li>Economic Support and Empowerment</li>
+            <li>Legislation and Enforcment</li>
+            <li>Partnership and Collaboration</li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
@@ -149,6 +151,31 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.id === "l1" || entry.target.id === "l3") {
+              entry.target.classList.add("slide-in-left");
+            } else {
+              entry.target.classList.add("slide-in-right");
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const targets = document.querySelectorAll("#l1, #l2, #l3, #l4");
+      targets.forEach(target => observer.observe(target));
+    });
+  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

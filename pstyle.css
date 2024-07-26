@@ -31,6 +31,7 @@ body{
 }
 .container_1 ,.container_2, .container_3, .container_4, .container_5, .container_6, .container_7 {
   text-align: center;
+  border: 1px dashed black;
 }
 
 .container_6 .row {
@@ -76,12 +77,24 @@ body{
   }
 }
 
+.slide-in-left {
+  animation: slideInLeft 3s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 3s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 #l1, #l3 {
-  animation: slideInLeft 1s ease-in-out;
+  animation: slideInLeft 3s ease-in-out;
 }
 
 #l2, #l4 {
-  animation: slideInRight 1s ease-in-out;
+  animation: slideInRight 4s ease-in-out;
 }
 
 
