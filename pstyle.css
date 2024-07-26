@@ -3,6 +3,17 @@ body{
   overflow-x: hidden;
 }
 
+.navbar-nav .nav-item .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  border: 1px solid black;
+  font-weight: bold;
+  text-decoration: underline;
+  color: blueviolet;
+}
+
 .img-co2{
     height: 500px;
     width: 630px;
