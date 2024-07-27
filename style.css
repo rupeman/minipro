@@ -94,3 +94,28 @@ grid-gap: 50px 30px;}
       text-decoration: underline;
       color: black;
     }
+
+.footer {
+   background-color: #343a40; 
+   color: white; 
+   padding: 20px 0; 
+}
+.footer .container-fluid-2 {
+   background-color: inherit;
+}
+.footer i {
+   color: white; 
+   margin-right: 10px; 
+   font-size: 1.5rem;
+}
+.footer p {
+   margin-bottom: 10px; 
+}
+.footer .social-icons {
+   text-align: right; 
+}
+.footer .content-left {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
